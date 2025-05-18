@@ -1,0 +1,43 @@
+@use '/src/scss/base/variables.scss' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    row-gap: 10px;
+    span {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: $dark;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    column-gap: 10px;
+    a {
+      display: block;
+      span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        &::before {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__logo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

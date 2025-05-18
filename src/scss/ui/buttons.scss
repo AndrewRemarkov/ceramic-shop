@@ -1,0 +1,18 @@
+@use '/src/scss/base/variables.scss' as *;
+@use '/src/scss/base/mixin.scss' as *;
+
+.button-default {
+  @include button;
+  width: 230px;
+  height: 50px;
+
+  &:hover {
+    color: $light;
+    background-color: $dark;
+  }
+
+  &:active {
+    color: $light;
+    background-color: $dark;
+  }
+}

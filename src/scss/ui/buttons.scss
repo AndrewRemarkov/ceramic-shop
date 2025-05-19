@@ -6,13 +6,22 @@
   width: 230px;
   height: 50px;
 
-  &:hover {
-    color: $light;
-    background-color: $dark;
+  @media (min-width: 1200px) {
+    &:hover {
+      color: $light;
+      background-color: $dark;
+    }
+
+    &:active {
+      color: $dark;
+      background: rgba(217, 217, 217, 0.1);
+      border: none;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4) inset;
+    }
   }
 
-  &:active {
-    color: $light;
-    background-color: $dark;
+  @media (min-width: 1920px) {
+    width: 330px;
+    height: 60px;
   }
 }

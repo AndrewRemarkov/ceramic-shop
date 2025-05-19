@@ -1,9 +1,11 @@
 @use '/src/scss/base/variables.scss' as *;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
   &__burger {
     display: flex;
@@ -18,15 +20,19 @@
     }
   }
 
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+
   &__icons {
     display: flex;
-    column-gap: 10px;
+    column-gap: 15px;
     a {
       display: block;
       span {
         display: block;
-        width: 20px;
-        height: 20px;
+        font-size: 20px;
         &::before {
           margin: 0;
         }
@@ -34,10 +40,49 @@
     }
   }
 
-  @media (max-width: 768px) {
+  &-nav {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &-nav {
+      display: block;
+      margin-top: 20px;
+      &__list {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        column-gap: 30px;
+        list-style-type: none;
+      }
+      &__link {
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &__burger {
+      visibility: hidden;
+    }
+  }
+
+  @media (min-width: 1200px) {
     &__logo {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    &-nav {
+      margin-top: 36px;
+      &__list {
+        column-gap: 60px;
+      }
     }
   }
 }

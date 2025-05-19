@@ -16,37 +16,62 @@
   </head>
   <body>
     <section class="promo">
+      <img
+        class="promo__potter"
+        src="/src/images/promo/potter.jpg"
+        alt="Potter"
+      />
       <div class="container">
         <header class="header">
-          <div class="header__burger">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="header__top">
+            <div class="header__burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a class="header__logo" href="/index.html">
+              <img
+                class="header__logo-image"
+                src="/src/images/logo.png"
+                alt="Logo"
+            /></a>
+            <div class="header__icons">
+              <a class="header__icons-search" href="#!">
+                <span class="icon-search"></span>
+              </a>
+              <a class="header__icons-card" href="#!">
+                <span class="icon-shopping-bag"></span>
+              </a>
+            </div>
           </div>
-          <a class="header__logo" href="/index.html">
-            <img
-              class="header__logo-image"
-              src="/src/images/logo.png"
-              alt="Logo"
-          /></a>
-          <div class="header__icons">
-            <a class="header__icons-search" href="#!">
-              <span class="icon-search"></span>
-            </a>
-            <a class="header__icons-card" href="#!">
-              <span class="icon-shopping-bag"></span>
-            </a>
-          </div>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="/">catalog</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="/">blog</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="/">about</a>
+              </li>
+            </ul>
+          </nav>
         </header>
-        <h1 class="promo__title title-h1--italic">
-          Make your dream come true or&nbsp;decorate your home
-        </h1>
-        <img
-          class="promo__image"
-          src="/src/images/promo/ceramic-vase.jpg"
-          alt=""
-        />
-        <button class="promo__button button-default">shop now</button>
+        <div class="promo__wrapper">
+          <h1 class="promo__title title-h1--italic">
+            Make your dream come true<br />
+            or&nbsp;decorate your home
+          </h1>
+          <div class="promo__cta">
+            <img
+              class="promo__image"
+              src="/src/images/promo/ceramic-vase.jpg"
+              alt=""
+            />
+            <button class="promo__button button-default">shop now</button>
+          </div>
+        </div>
       </div>
     </section>
 

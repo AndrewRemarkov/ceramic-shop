@@ -3,7 +3,7 @@
 @mixin title {
   font-weight: 500;
   font-style: normal;
-  line-height: none;
+  text-align: center;
   text-transform: uppercase;
   color: $dark;
 }

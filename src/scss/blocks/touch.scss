@@ -1,0 +1,135 @@
+@use '/src/scss/base/variables.scss' as *;
+
+.touch {
+  padding-top: 60px;
+  &__wrapper {
+    position: relative;
+    margin-top: 60px;
+  }
+  &__image--tea {
+    display: none;
+  }
+
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    line-height: 28px;
+    color: $dark;
+
+    &:nth-child(2) {
+      margin-top: 8px;
+    }
+  }
+
+  &__input,
+  &__text {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #fff;
+    border: $border-input;
+    border-radius: 2px;
+
+    &:focus {
+      border: none;
+      outline: $border-input-focus;
+    }
+
+    &::placeholder {
+      color: $ui-disabled;
+    }
+  }
+
+  &__input {
+    height: 48px;
+  }
+
+  &__text {
+    height: 132px;
+    margin-bottom: 20px;
+  }
+
+  &__check-block {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    a {
+      color: #a22dc6;
+    }
+  }
+
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+
+  &__image--vase {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &__form {
+      width: 50%;
+    }
+
+    &__image--vase {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__image--tea {
+      display: block;
+      width: 550px;
+      height: 342px;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+      object-fit: cover;
+    }
+
+    &__form {
+      padding-left: 20px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    &__image--tea {
+      width: 100%;
+      height: 356px;
+    }
+
+    &__form {
+      width: 100%;
+      padding-left: 142px;
+    }
+
+    &__fieldset {
+      display: flex;
+      column-gap: 45px;
+    }
+
+    &__input {
+      width: 300px;
+    }
+
+    &__text {
+      width: 300px;
+      max-width: 645px;
+      resize: both;
+    }
+  }
+}

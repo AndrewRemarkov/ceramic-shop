@@ -9,10 +9,6 @@
     <link type="image/x-icon" href="favicon.ico" rel="icon" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <section class="promo">
@@ -22,7 +18,28 @@
         alt="Potter"
       />
       <div class="container">
-        <header class="header">
+        <header class="header" data-page="index">
+          <div class="header__menu">
+            <div class="header__menu-close">
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="header__menu-nav">
+              <ul class="header__menu-nav-list">
+                <li class="header__menu-nav-item">
+                  <a class="header__menu-nav-link" href="catalog.html"
+                    >catalog</a
+                  >
+                </li>
+                <li class="header__menu-nav-item">
+                  <a class="header__menu-nav-link" href="blog.html">blog</a>
+                </li>
+                <li class="header__menu-nav-item">
+                  <a class="header__menu-nav-link" href="about.html">about</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div class="header__top">
             <div class="header__burger">
               <span></span>
@@ -47,13 +64,13 @@
           <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item">
-                <a class="header-nav__link" href="/">catalog</a>
+                <a class="header-nav__link" href="catalog.html">catalog</a>
               </li>
               <li class="header-nav__item">
-                <a class="header-nav__link" href="/">blog</a>
+                <a class="header-nav__link" href="blog.html">blog</a>
               </li>
               <li class="header-nav__item">
-                <a class="header-nav__link" href="/">about</a>
+                <a class="header-nav__link" href="about.html">about</a>
               </li>
             </ul>
           </nav>
@@ -245,12 +262,12 @@
             <div class="footer__links">
               <div class="footer__links-item">
                 <h4 class="footer__links-title title-h4">discover</h4>
-                <a class="footer__links-link" href="">About Us</a>
-                <a class="footer__links-link" href="">Blog</a>
+                <a class="footer__links-link" href="about.html">About Us</a>
+                <a class="footer__links-link" href="blog.html">Blog</a>
               </div>
               <div class="footer__links-item">
                 <h4 class="footer__links-title title-h4">shopping</h4>
-                <a class="footer__links-link" href="">Catalog</a>
+                <a class="footer__links-link" href="catalog.html">Catalog</a>
               </div>
               <div class="footer__links-item">
                 <h4 class="footer__links-title title-h4">information</h4>

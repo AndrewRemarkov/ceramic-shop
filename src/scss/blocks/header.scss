@@ -1,6 +1,10 @@
 @use '/src/scss/base/variables.scss' as *;
 
 .header {
+  &:not([data-page='index']) {
+    padding-top: 50px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -42,6 +46,71 @@
 
   &-nav {
     display: none;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 10px;
+    background-color: $light;
+    opacity: 0;
+    transition: all 0.3s;
+
+    &_active {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+
+    &-close {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      span {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: #000;
+        transition: transform 0.3s ease;
+        transform-origin: center center;
+        will-change: transform;
+        &:first-child {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:last-child {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    &-nav {
+      margin-top: 50px;
+      font-size: 20px;
+      text-transform: uppercase;
+      &-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-left: 25px;
+        row-gap: 25px;
+        list-style-type: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {

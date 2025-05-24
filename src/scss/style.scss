@@ -3,6 +3,7 @@
 @use '/src/scss/libs/grids-min.css';
 @use '/src/scss/libs/grids-responsive-min.css';
 
+@use '/src/scss/base/fonts.scss';
 @use '/src/scss/base/variables.scss' as *;
 @use '/src/scss/base/basic.scss';
 
@@ -15,5 +16,7 @@
 @use '/src/scss/blocks/activities.scss';
 @use '/src/scss/blocks/touch.scss';
 @use '/src/scss/blocks/works.scss';
+
+@use '/src/scss/blocks/catalog.scss';
 
 @use '/src/scss/blocks/footer.scss';

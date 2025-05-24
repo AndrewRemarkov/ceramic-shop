@@ -32,3 +32,8 @@
     font-size: 24px;
   }
 }
+
+.title-h4 {
+  @include title;
+  font-size: 16px;
+}

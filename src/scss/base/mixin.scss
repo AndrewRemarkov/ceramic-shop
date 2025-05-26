@@ -23,3 +23,22 @@
     all 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
+
+@mixin angle-decoration {
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $dark;
+    content: '';
+  }
+  &::after {
+    width: 200px;
+    height: 1px;
+  }
+  &::before {
+    width: 1px;
+    height: 200px;
+  }
+}

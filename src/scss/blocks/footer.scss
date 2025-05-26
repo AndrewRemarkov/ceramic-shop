@@ -1,9 +1,13 @@
 @use '/src/scss/base/variables.scss' as *;
 
 .footer {
-  margin-top: 95px;
+  margin-top: 60px;
   padding: 50px 0;
   background-color: $dark;
+
+  &-index {
+    margin-top: 80px;
+  }
 
   &__wrapper {
     @media (min-width: 1200px) {

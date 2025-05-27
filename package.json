@@ -13,5 +13,8 @@
     "sass": "^1.84.0",
     "swiper": "^11.2.7",
     "vite": "^6.1.0"
+  },
+  "dependencies": {
+    "just-validate": "^4.3.0"
   }
 }

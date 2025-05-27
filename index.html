@@ -145,16 +145,17 @@
             />
           </div>
           <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
-            <form class="touch__form" action="#">
+            <form class="touch__form" id="touch__form" action="#">
               <fieldset class="touch__fieldset">
                 <div class="touch__input-block">
-                  <labe class="touch__label" for="name">Name</labe>
+                  <label class="touch__label" for="name">Name</label>
                   <input
                     class="touch__input"
                     id="name"
                     name="name"
                     type="text"
                     placeholder="Name"
+                    required
                   />
                 </div>
                 <div class="touch__input-block">
@@ -165,26 +166,30 @@
                     name="email"
                     type="email"
                     placeholder="Email"
+                    required
                   />
                 </div>
               </fieldset>
-              <label class="touch__label" for="text">Your question</label>
+              <label class="touch__label" for="question">Your question</label>
               <textarea
                 class="touch__text"
-                id="text"
-                name="text"
+                id="question"
+                name="question"
                 placeholder="Question"
+                required
               ></textarea>
-              <label class="touch__label touch__check-block" for="terms">
+              <div class="error-message"></div>
+
+              <label class="touch__label touch__check-block" for="checkbox">
                 <input
                   class="touch__checkbox"
-                  id="terms"
-                  name="terms"
+                  id="checkbox"
                   type="checkbox"
                   required
                 />
-                I&nbsp;agree with the&nbsp;<a class="terms" href="#!">terms</a>
-              </label>
+                I agree with the <a href="#">terms</a></label
+              >
+              <div class="checkbox-error-message"></div>
               <button class="button-send touch__button" type="submit">
                 send request
               </button>
@@ -235,9 +240,11 @@
             </div>
             <input
               class="footer__form-input"
+              id="footer__email"
               type="email"
               placeholder="Enter your e-mail"
             />
+            <div class="email-error-message"></div>
             <label class="footer__form-label" for="footer-terms">
               <input
                 class="footer__form-checkbox"
@@ -246,11 +253,12 @@
                 type="checkbox"
                 required
               />
-              <span class="custom-checkbox" re> </span>
+              <span class="custom-checkbox"> </span>
               <span class="custom-checkbox__text">
                 I&nbsp;agree with the&nbsp;<a class="terms" href="#!">terms</a>
               </span>
             </label>
+            <div class="check-error-message"></div>
             <button
               class="button-footer-send footer__form-button"
               type="submit"

@@ -226,9 +226,11 @@
             </div>
             <input
               class="footer__form-input"
+              id="footer__email"
               type="email"
               placeholder="Enter your e-mail"
             />
+            <div class="email-error-message"></div>
             <label class="footer__form-label" for="footer-terms">
               <input
                 class="footer__form-checkbox"
@@ -237,11 +239,12 @@
                 type="checkbox"
                 required
               />
-              <span class="custom-checkbox" re> </span>
+              <span class="custom-checkbox"> </span>
               <span class="custom-checkbox__text">
                 I&nbsp;agree with the&nbsp;<a class="terms" href="#!">terms</a>
               </span>
             </label>
+            <div class="check-error-message"></div>
             <button
               class="button-footer-send footer__form-button"
               type="submit"

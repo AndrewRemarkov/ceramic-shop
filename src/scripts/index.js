@@ -1,12 +1,14 @@
 import '/src/scss/style.scss';
 
-/* Swiper */
-
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
+import JustValidate from 'just-validate';
+
+/* Swiper */
 
 try {
   const swiper = new Swiper('.swiper', {
@@ -85,3 +87,89 @@ try {
     );
   });
 } catch (error) {}
+
+/* Forms */
+
+try {
+  const validatorTouch = new JustValidate('.touch__form');
+
+  validatorTouch
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: 'Please fill the name'
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Minimum 2 chars!'
+      }
+    ])
+    .addField('#email', [
+      {
+        rule: 'required'
+      },
+      {
+        rule: 'email'
+      }
+    ])
+    .addField(
+      '#question',
+      [
+        {
+          rule: 'required'
+        },
+        {
+          rule: 'minLength',
+          value: 5
+        }
+      ],
+      {
+        errorsContainer: '.error-message'
+      }
+    )
+    .addField(
+      '#checkbox',
+      [
+        {
+          rule: 'required'
+        }
+      ],
+      {
+        errorsContainer: '.checkbox-error-message'
+      }
+    );
+} catch (error) {}
+
+try {
+  const validatorFooter = new JustValidate('.footer__form');
+
+  validatorFooter
+    .addField(
+      '#footer__email',
+      [
+        {
+          rule: 'required'
+        },
+        {
+          rule: 'email'
+        }
+      ],
+      {
+        errorsContainer: document
+          .querySelector('#footer__email')
+          .parentElement.querySelector('.email-error-message')
+      }
+    )
+    .addField(
+      '#footer-terms',
+      [
+        {
+          rule: 'required'
+        }
+      ],
+      {
+        errorsContainer: '.check-error-message'
+      }
+    );
+} catch (e) {}

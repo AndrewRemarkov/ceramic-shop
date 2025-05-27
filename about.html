@@ -72,7 +72,137 @@
         </nav>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="history">
+        <div class="container">
+          <h2 class="title-h2">where it all began</h2>
+          <div class="history__wrapper">
+            <img
+              class="history__image"
+              src="/src/images/about/crafts.jpg"
+              alt=""
+            />
+            <div class="history__text">
+              <p>
+                Our small pottery workshop began as&nbsp;a&nbsp;simple passion
+                project, rooted in&nbsp;a&nbsp;love for handmade artistry and
+                traditional craftsmanship. What started with a&nbsp;single wheel
+                and a&nbsp;few lumps of&nbsp;clay has grown into a&nbsp;cozy
+                creative space where ideas take shape and stories are told
+                through every piece. Inspired by&nbsp;timeless techniques and
+                the beauty of&nbsp;natural materials, we&rsquo;ve built
+                a&nbsp;place where both beginners and experienced artists can
+                come together, share their skills, and celebrate the art
+                of&nbsp;pottery. Each creation reflects our journey&mdash;shaped
+                by&nbsp;hand, fired with care, and made
+                to&nbsp;be&nbsp;cherished.
+              </p>
+
+              <p>
+                Over the years, our workshop has become more than just
+                a&nbsp;place to&nbsp;create&mdash;it&rsquo;s a&nbsp;community.
+                Friends, families, and curious visitors gather here
+                to&nbsp;learn, connect, and experience the joy of&nbsp;working
+                with clay. From intimate masterclasses to&nbsp;collaborative
+                projects, we&nbsp;believe in&nbsp;the power of&nbsp;handmade art
+                to&nbsp;bring people together and spark creativity
+                in&nbsp;unexpected ways.
+              </p>
+
+              Every piece that leaves our studio carries a&nbsp;bit of&nbsp;our
+              story, blending tradition with personal expression. Whether
+              it&rsquo;s a&nbsp;simple cup or&nbsp;an&nbsp;intricate vase, our
+              ceramics are crafted to&nbsp;be&nbsp;both beautiful and
+              functional, adding warmth and authenticity to&nbsp;any space.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="touch">
+        <div class="container">
+          <h2 class="title-h2">get in touch</h2>
+          <div class="pure-g touch__wrapper">
+            <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
+              <img
+                class="touch__image--tea"
+                src="/src/images/form/tea.jpg"
+                alt="tea"
+              />
+            </div>
+            <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
+              <form class="touch__form" id="touch__form" action="#">
+                <fieldset class="touch__fieldset">
+                  <div class="touch__input-block">
+                    <label class="touch__label" for="name">Name</label>
+                    <input
+                      class="touch__input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+                  <div class="touch__input-block">
+                    <label class="touch__label" for="email">Email</label>
+                    <input
+                      class="touch__input"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                </fieldset>
+                <label class="touch__label" for="question">Your question</label>
+                <textarea
+                  class="touch__text"
+                  id="question"
+                  name="question"
+                  placeholder="Question"
+                  required
+                ></textarea>
+                <div class="error-message"></div>
+
+                <label class="touch__label touch__check-block" for="checkbox">
+                  <input
+                    class="touch__checkbox"
+                    id="checkbox"
+                    type="checkbox"
+                    required
+                  />
+                  I agree with the <a href="#">terms</a></label
+                >
+                <div class="checkbox-error-message"></div>
+                <button class="button-send touch__button" type="submit">
+                  send request
+                </button>
+              </form>
+              <img
+                class="touch__image--vase"
+                src="/src/images/form/vase.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="findus">
+        <div class="container">
+          <h2 class="title-h2">find us</h2>
+
+          <div class="findus__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.071269034697!2d-73.95154179744594!3d40.72972439512574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593c58f8777d%3A0xe2215ac687bd7249!2sCLAY%20SPACE%20Ceramic%20Center!5e1!3m2!1sru!2sno!4v1748352520996!5m2!1sru!2sno"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
@@ -83,9 +213,11 @@
             </div>
             <input
               class="footer__form-input"
+              id="footer__email"
               type="email"
               placeholder="Enter your e-mail"
             />
+            <div class="email-error-message"></div>
             <label class="footer__form-label" for="footer-terms">
               <input
                 class="footer__form-checkbox"
@@ -94,11 +226,12 @@
                 type="checkbox"
                 required
               />
-              <span class="custom-checkbox" re> </span>
+              <span class="custom-checkbox"> </span>
               <span class="custom-checkbox__text">
                 I&nbsp;agree with the&nbsp;<a class="terms" href="#!">terms</a>
               </span>
             </label>
+            <div class="check-error-message"></div>
             <button
               class="button-footer-send footer__form-button"
               type="submit"

@@ -138,7 +138,21 @@ try {
       {
         errorsContainer: '.checkbox-error-message'
       }
-    );
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch('https://httpbin.org/post', {
+        method: 'POST',
+        body: formData
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('Success', data);
+          form.reset();
+        });
+    });
 } catch (error) {}
 
 try {
@@ -171,5 +185,19 @@ try {
       {
         errorsContainer: '.check-error-message'
       }
-    );
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch('https://httpbin.org/post', {
+        method: 'POST',
+        body: formData
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('Success', data);
+          form.reset();
+        });
+    });
 } catch (e) {}
